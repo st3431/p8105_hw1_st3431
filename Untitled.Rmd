@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 ```
+
 ## Problem 1
 
 ```{r description}
@@ -38,12 +39,21 @@ plot_df=
 ggplot(plot_df, aes(color=penguins$species, x = x, y = y)) + geom_point()
 ```
 
-## Including Plots
+## Problem 2
 
-You can also embed plots, for example:
+```{r}
+hw_df=tibble(random_sample=rnorm(10), 
+  vec_logic=random_sample>0, 
+  vec_character=c("a","b","c","d","e","f","g","h","i","j"), 
+  vec_factor=factor(c("low", "medium", "high", "low","medium","high", "low","medium","high","low")) )
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+#means of variable within the df
+  mean(hw_df$vec_logic)
+  mean(hw_df$vec_character)
+  mean(hw_df$vec_factor)
+  mean(hw_df$random_sample)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```
+
+
