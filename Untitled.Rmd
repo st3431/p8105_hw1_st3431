@@ -1,0 +1,49 @@
+---
+title: "p8105_hw1_st3431"
+output: html_document
+date: "2022-09-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+## Problem 1
+
+```{r description}
+data("penguins", package = "palmerpenguins")
+
+summary(penguins)
+  summary(penguins$flipper_length_mm)
+  summary(penguins$species)
+
+nrow(penguins)
+
+ncol(penguins)
+
+mean(penguins$flipper_length_mm, na.rm=T)
+
+```
+
+```{r scatterplot}
+plot_df=
+  tibble(
+    x=penguins$bill_length_mm,
+    y=penguins$flipper_length_mm
+  )
+  
+ggplot(plot_df, aes(color=penguins$species, x = x, y = y)) + geom_point()
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
