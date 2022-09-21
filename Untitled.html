@@ -429,7 +429,7 @@ ggplot(plot_df, aes(color=penguins$species, x = x, y = y)) + geom_point()</code>
 
 #means of variable within the df
   mean(hw_df$vec_logic)</code></pre>
-<pre><code>## [1] 0.4</code></pre>
+<pre><code>## [1] 0.7</code></pre>
 <pre class="r"><code>  mean(hw_df$vec_character)</code></pre>
 <pre><code>## Warning in mean.default(hw_df$vec_character): argument is not numeric or
 ## logical: returning NA</code></pre>
@@ -439,8 +439,10 @@ ggplot(plot_df, aes(color=penguins$species, x = x, y = y)) + geom_point()</code>
 ## returning NA</code></pre>
 <pre><code>## [1] NA</code></pre>
 <pre class="r"><code>  mean(hw_df$random_sample)</code></pre>
-<pre><code>## [1] -0.1910374</code></pre>
-<p>```</p>
+<pre><code>## [1] 0.3837591</code></pre>
+<pre class="r"><code>as.numeric(hw_df$vec_logic)
+as.numeric(hw_df$vec_character)
+as.numeric(hw_df$vec_factor)</code></pre>
 </div>
 
 

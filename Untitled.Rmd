@@ -54,6 +54,10 @@ hw_df=tibble(random_sample=rnorm(10),
   mean(hw_df$random_sample)
 ```
 
+```{r, eval=FALSE}
+as.numeric(hw_df$vec_logic)
+as.numeric(hw_df$vec_character)
+as.numeric(hw_df$vec_factor)
 ```
 
 
