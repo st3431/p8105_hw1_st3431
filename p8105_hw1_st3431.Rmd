@@ -1,6 +1,7 @@
 ---
 title: "p8105_hw1_st3431_"
-output: html_document
+author: "Supraja Teki"
+output: github_document
 date: "2022-09-22"
 ---
 
